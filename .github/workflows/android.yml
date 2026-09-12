@@ -10,10 +10,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: ./ruhul-media.app
-
     steps:
     - uses: actions/checkout@v4
 
@@ -27,6 +23,10 @@ jobs:
       uses: gradle/actions/setup-gradle@v3
 
     - name: Build with Gradle
+      run: ./gradlew assembleDebug
+      continue-on-error: true
+
+    - name: Alternative Build
       run: gradle assembleDebug
 
     - name: Upload APK
