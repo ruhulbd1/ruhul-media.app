@@ -13,8 +13,15 @@ jobs:
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v4
-      with:
-        path: .
+
+    - name: Move files to root if nested
+      run: |
+        if [ -d "ruhul-media.app" ]; then
+          shopt -s dotglob
+          mv ruhul-media.app/* .
+          rmdir ruhul-media.app
+          shopt -u dotglob
+        fi
 
     - name: set up JDK 17
       uses: actions/setup-java@v4
@@ -27,7 +34,6 @@ jobs:
 
     - name: Build with Gradle
       run: gradle assembleDebug
-      working-directory: ./ruhul-media.app
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
