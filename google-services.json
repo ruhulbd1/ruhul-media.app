@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "105920612724",
+    "project_id": "ruhul-mesia",
+    "storage_bucket": "ruhul-mesia.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:105920612724:android:cvyqwp",
+        "android_client_info": {
+          "package_name": "com.aistudio.youtube.cvyqwp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcx1EzZ6S2V-ooN-rw1t25wLwmur_1ijI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
